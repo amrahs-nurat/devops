@@ -55,3 +55,22 @@
     `./cataline.sh start` (To start the tomcat, run this command from bin dir.)
     `tail ../logs/cataline.out` (To see the log)
 - Now test tomcat using IP of the server.
+
+#### Installation of Jfrog:
+- use the url to install jfrog https://websiteforstudents.com/how-to-install-jfrog-artifactory-on-ubuntu-18-04-16-04/
+### OR
+- Download jfrog tar file from official site
+- copy tar file in Devops folder
+    `cp -R Download/artifactory Devops/`
+- go to bin:
+    `./artifactory.sh` ( To Run Artifactory )
+- Test it to run http://Server_ip:8081 using default user (admin) and password (admin).
+#### Installation of Jenkins:
+- Use the url to install the jenkins: https://jenkins.io/download/ and choose appropriate OS to installation.
+- Once installtion is completed, then use http://server_ip/8080 to do further configuration. 
+- How to change Jenkins default port:
+  `default read /Library/Preferences/org.jenkins-ci`
+  `default write /Library/Preferences/org.jenkins-ci httpPort 8090`
+  `sudo launchctl unload /Library/Preferences/org.jenkins-ci.plist`
+  `sudo launchctl load /Library/Preferences/org.jenkins-ci.plist`
+
